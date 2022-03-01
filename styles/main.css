@@ -23,6 +23,7 @@ body {
     border: 3px solid steelblue;
     box-shadow: 5px 10px 8px 10px grey;
     background-color: white;
+   
 }
 h1, h2, h3, p, blockquote {
     margin-bottom: 12px ;
@@ -41,7 +42,7 @@ header h2 {
 
 header img {
     float: left; 
-    margin-right: 15 px;
+    padding: 10px 1.5em;
 }
 
 /* Horizontal Nav 
@@ -150,6 +151,7 @@ float: none;
     background-color: lightsteelblue;
     padding: .5em 0 .5em .5em; 
     color: black;
+    border-radius: 25px;
 }
 #nav_list ul li a:hover{
     color: white;
@@ -215,4 +217,49 @@ footer p{
     font-variant: small-caps;
    
 
+}
+/* hide the mobilemenu */
+
+#mobilemenu{
+    display: none; 
+}
+
+
+/* media */
+@media only screen and (max-width: 900px){
+    body{
+        box-shadow: none;
+        font-size: 90%;
+    }
+    
+}
+@media only screen and (max-width: 767px) {
+    #nav_menu{
+        display: none; 
+    }
+    #mobilemenu{
+        display: block; 
+    }
+    .slicknav_menu{
+        background-color: steelblue !important;
+    }
+    header h2 {
+        font-size: 200%;
+    }
+    section, aside {
+        float: none; 
+        width: 100%;
+        margin: 0 auto;
+        padding: .5em;
+    }
+    header img {
+        float: none; 
+        padding: .5em;
+        display: block;
+        margin: 0 auto
+    }
+     header h2, header h3{
+        text-align: center;
+        
+    }
 }
