@@ -28,6 +28,14 @@ body {
 h1, h2, h3, p, blockquote {
     margin-bottom: 12px ;
 }
+h1{
+    font-size: 300%;
+    color: lightsteelblue;
+    text-align: center;
+    margin: 10px 0 0; 
+    font-variant: small-caps;
+    text-shadow: 1px 1px 2px black;
+}
 header{
     border-bottom: 3px solid steelblue;
     background-image: linear-gradient(white, lightsteelblue);
@@ -79,16 +87,20 @@ padding: 10px 0;
 }
 */
 
+
+
+
 main {
     padding: 0 1em; 
 }
 aside{
     width: 30%;
     padding-top: 1.5em;
-
+/*
 }
 #nav_menu {
     border-bottom: 2px solid steelblue;
+    background-color: steelblue;
 }
 #nav_menu ul{
     margin: 0;
@@ -131,7 +143,60 @@ float: none;
 #nav_menu ul li a:hover, #nav_menu ul li a:focus {
     background-color: lightsteelblue ;
 
+} 
+*/
+
 }
+.container{
+    display: flex; 
+    list-style: none;
+    background-color: steelblue;
+}
+.container li{
+    flex: 1; 
+}
+.container li a{
+    display: block; 
+    padding: .75em 1em; 
+   text-decoration: none;
+   color: white; 
+   font-weight: bold;
+   transition: all 1s;
+
+}
+.container li a:hover{
+    color: black;
+    background-color: lightsteelblue;
+}
+
+.container ul{
+    display: none; 
+    width: 20%;
+    list-style: none;
+    position: absolute;
+    background-color: steelblue;
+    top: 100%;
+}
+.container ul li{
+    flex-direction: column;
+    width: 20%; 
+}
+.container ul li a{
+    padding-left: 1em;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.container li:hover {
+    display: block; 
+}
+
+
+
+
+
+
 #nav_list h2 {
     margin-bottom: 5px;
     text-align: center;
@@ -180,6 +245,14 @@ blockquote{
 }
 h3 {
     font-size: 150%;
+}
+blockquote{
+    width: 80%;
+    margin: 1em auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 120%;
+    padding: 1em; 
 }
 aside a{
     text-decoration: none;
@@ -231,7 +304,13 @@ footer p{
         box-shadow: none;
         font-size: 90%;
     }
-    
+    #leftaside{
+        display: none; 
+    }
+    section{
+        width: 70%;
+        padding-left: 1em;
+    }
 }
 @media only screen and (max-width: 767px) {
     #nav_menu{
@@ -244,6 +323,9 @@ footer p{
         background-color: steelblue !important;
     }
     header h2 {
+        font-size: 200%;
+    }
+    h1{
         font-size: 200%;
     }
     section, aside {
